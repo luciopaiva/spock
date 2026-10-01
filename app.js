@@ -34,7 +34,13 @@ async function stored() {
 }
 async function fileNames() {
   const tree = await ci.fsTree();
-  return tree.nodes.filter(n => !n.nodes && /\.(CIR|CFG|RES|NET|BMP)$/i.test(n.name)).map(n => n.name).sort();
+  function walk(node, prefix = '') {
+    return (node.nodes || []).flatMap(child => {
+      const name = prefix + child.name;
+      return child.nodes ? walk(child, name + '/') : /\.(CIR|CFG|RES|NET|BMP)$/i.test(name) ? [name] : [];
+    });
+  }
+  return walk(tree).sort();
 }
 function persist() {
   const result = saving.then(saveFiles);
@@ -68,7 +74,7 @@ async function refresh() {
     button.onclick = async () => {
       try {
         const url = URL.createObjectURL(new Blob([await disk(() => ci.fsReadFile(name))], {type:'application/octet-stream'}));
-        const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 10000);
+        const a = document.createElement('a'); a.href = url; a.download = name.split('/').pop(); a.click(); setTimeout(() => URL.revokeObjectURL(url), 10000);
       } catch (e) { $('notice').textContent = e.message; }
     };
     row.append(label, button); return row;
