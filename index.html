@@ -5,14 +5,14 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; worker-src 'self' blob:; connect-src 'self'; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Spock · DOS circuit simulator</title>
-  <link rel="stylesheet" href="./style.css?v=c1e082fc28d6d656">
+  <link rel="stylesheet" href="./style.css?v=7a5bad1f46b40d36">
   <script src="./emulator/emulators.js" defer></script>
-  <script src="./app.js?v=c1e082fc28d6d656" type="module"></script>
+  <script src="./app.js?v=7a5bad1f46b40d36" type="module"></script>
 </head>
 <body>
   <main>
     <section class="machine" aria-label="DOS emulator">
-      <div class="toolbar"><button id="start">Start Spock</button><button id="enter" disabled>Send Enter</button><button id="fullscreen" disabled>Full screen</button><span id="status" role="status">Ready to start</span></div>
+      <div class="toolbar"><button id="start">Start Spock</button><button id="fullscreen" disabled>Full screen</button><span id="status" role="status">Ready to start</span></div>
       <div class="screen"><canvas id="display" width="640" height="480" tabindex="0" aria-label="Spock DOS screen. Click to use keyboard and mouse."></canvas></div>
       <p class="hint">Click the screen to control Spock. Press Enter at the opening screen. Right-click works inside DOS; Tab moves out of the screen.</p>
     </section>

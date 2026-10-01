@@ -108,14 +108,13 @@ $('start').onclick = async () => {
       try {
         const initial = await ci.screenshot(); canvas.width=initial.width; canvas.height=initial.height; ctx.putImageData(initial,0,0);
       } catch { /* The worker may not have emitted its first frame yet. */ }
-      for(const id of ['enter','fullscreen','import','refresh','save']) $(id).disabled=false;
+      for(const id of ['fullscreen','import','refresh','save']) $(id).disabled=false;
       $('status').textContent = 'Running · press Enter'; $('start').textContent = 'Running'; canvas.focus();
       await refresh(); setInterval(() => { if(!busy) void persist(); },5000);
       await new Promise(() => {});
     });
   } catch (e) { $('status').textContent = e.message; $('start').disabled=false; }
 };
-$('enter').onclick = () => { ci.simulateKeyPress(257); $('status').textContent='Running'; canvas.focus(); };
 $('fullscreen').onclick = () => canvas.parentElement.requestFullscreen().catch(e => { $('notice').textContent=e.message; });
 $('save').onclick = async () => {
   $('save').disabled=true; $('save').textContent='Saving…';
