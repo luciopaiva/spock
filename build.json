@@ -6,8 +6,8 @@
   },
   "runtimeCommit": "140b923c6cf116de3a1fda48c5a4151acd70dde1",
   "sha256": {
-    "index.html": "9f82189de21582697b3a61bc4af00e6bafbda2d806944d5e8e40723789e2ef6d",
-    "app.js": "5205bea4c2bbd417283c86e1fda0f708db43a6fb512799ce4dd5cab31f7a51c8",
+    "index.html": "b3832e418a079ce24838dafea02355a6d1c8c2e2848a58b79a5c0813164087ff",
+    "app.js": "8f2ae365abe7fa6c4e0611710b12e1628b6b8ed0bb0831b746b3c0e9f1c004e7",
     "style.css": "7209a1b4395c9206b5dd665c41d4b2a003bff435cacefbdc5759475d913d341f",
     "runtime/SPOCK.EXE": "ff86b9425206a96c8d56ec9a57e1a615cc89e9734d5b27b53c5e7b56256e6510",
     "runtime/AAA-TEST.CFG": "9e8a3652020c3f22d2581c46ff0d9d5f6914de5707ec6d041c9680ab85186507",

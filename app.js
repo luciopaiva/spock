@@ -12,7 +12,9 @@ const canvas = $('display'), ctx = canvas.getContext('2d');
 const held = new Set();
 const base = new URL('./', import.meta.url);
 async function asset(path) {
-  const response = await fetch(new URL(path, base));
+  const url = new URL(path, base);
+  url.search = new URL(import.meta.url).search;
+  const response = await fetch(url);
   if (!response.ok) throw new Error(`Could not load ${path}: HTTP ${response.status}`);
   return response;
 }
