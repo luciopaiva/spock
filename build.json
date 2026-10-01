@@ -1,0 +1,21 @@
+{
+  "emulator": {
+    "package": "emulators",
+    "version": "8.5.1",
+    "sourceCommit": "fc8441e4af7a9cfa3a147f3b54c1aa9c0ab2198c"
+  },
+  "runtimeCommit": "140b923c6cf116de3a1fda48c5a4151acd70dde1",
+  "sha256": {
+    "index.html": "9f82189de21582697b3a61bc4af00e6bafbda2d806944d5e8e40723789e2ef6d",
+    "app.js": "274eba7c5474a7f95f5890861dcbcd600e563448a465b0f142c849d8668f8e36",
+    "style.css": "7209a1b4395c9206b5dd665c41d4b2a003bff435cacefbdc5759475d913d341f",
+    "runtime/SPOCK.EXE": "ff86b9425206a96c8d56ec9a57e1a615cc89e9734d5b27b53c5e7b56256e6510",
+    "runtime/AMP.CIR": "94f5ba8989293f90020eb5225d9166f16afa8a4c4813434272d6d844f14e0a2d",
+    "runtime/AMP.CFG": "36a3a12094196d5508c6b25f28b2c2f626599f751e4e61665666e32c551c55d6",
+    "emulator/emulators.js": "b0693c27882272c5867c2230215a556c698020245190c07657e2949edf3171c0",
+    "emulator/wdosbox.js": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+    "emulator/wdosbox.wasm": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+    "emulator/wlibzip.js": "b8e55c2aa4c96e961c9965f289c0f40b5d44f02a557dcf980ddc29787b493842",
+    "emulator/wlibzip.wasm": "25064d970c42ca7ea0fdb8b058204d6e41cc8826a676219677772f5591e8337b"
+  }
+}

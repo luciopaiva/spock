@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; worker-src 'self' blob:; connect-src 'self'; img-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Spock · DOS circuit simulator</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./emulator/emulators.js" defer></script>
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <main>
+    <section class="machine" aria-label="DOS emulator">
+      <div class="toolbar"><button id="start">Start Spock</button><button id="enter" disabled>Send Enter</button><button id="fullscreen" disabled>Full screen</button><span id="status" role="status">Ready to start</span></div>
+      <div class="screen"><canvas id="display" width="640" height="480" tabindex="0" aria-label="Spock DOS screen. Click to use keyboard and mouse."></canvas></div>
+      <p class="hint">Click the screen to control Spock. Press Enter at the opening screen. Right-click works inside DOS; Tab moves out of the screen.</p>
+    </section>
+    <aside>
+      <section><h2>Your circuit files</h2><p>Import a <code>.CIR</code> and its matching <code>.CFG</code>, then load the circuit inside Spock using its filename.</p><label class="import">Import files<input id="import" type="file" accept=".cir,.cfg" multiple disabled></label><p id="notice" role="status"></p><div class="file-actions"><button id="refresh" disabled>Refresh files</button><button id="save" disabled>Save to browser</button></div><p id="storage">Stored only in this browser. No uploads.</p><div id="files"></div></section>
+      <section><h2>First circuit</h2><ol><li>Start Spock, then press Enter.</li><li>Click the file button at the far bottom right.</li><li>Choose <strong>Ler Circuito</strong> (load), click the <strong>Nome</strong> field, enter <code>AMP</code>, press Enter, then click <strong>LER</strong>.</li><li>Click <strong>Plot</strong> near the bottom left to plot.</li></ol><p>To keep edits, use <strong>Gravar Circuito</strong> in the file menu, enter a name, then click <strong>GRAVAR</strong>. Browser storage copies DOS files, not unsaved edits or the running screen.</p><p>Saved DOS files are copied to browser storage every 5 seconds. Use “Save to browser” and wait for it to finish before closing. Download important work.</p></section>
+    </aside>
+  </main>
+</body></html>

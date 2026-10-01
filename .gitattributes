@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Preserve the exact original DOS bytes and third-party runtime assets.
+runtime/** -text -diff
+emulator/** -text -whitespace
